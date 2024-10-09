@@ -1,4 +1,5 @@
 import { Metadata, useMutation } from '@redwoodjs/web'
+import { toast, Toaster } from '@redwoodjs/web/toast'
 import {
   Form,
   TextField,
@@ -32,7 +33,11 @@ const ContactPage = () => {
   const [create, { loading, error }] = useMutation<
     CreateContactMutation,
     CreateContactMutationVariables
-  >(CREATE_CONTACT)
+  >(CREATE_CONTACT, {
+    onCompleted: () => {
+      toast.success('Thank you for your submission!')
+    },
+  })
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     create({ variables: { input: data } })
@@ -41,6 +46,7 @@ const ContactPage = () => {
   return (
     <>
       <Metadata title="Contact" description="Contact page" />
+      <Toaster />
       <Form onSubmit={onSubmit} config={{ mode: 'onBlur' }}>
         <Label name="name" errorClassName="error">
           Name
