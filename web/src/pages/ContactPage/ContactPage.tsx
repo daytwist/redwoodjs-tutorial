@@ -8,6 +8,7 @@ import {
   SubmitHandler,
   FieldError,
   Label,
+  FormError,
 } from '@redwoodjs/forms'
 
 import {
@@ -47,7 +48,8 @@ const ContactPage = () => {
     <>
       <Metadata title="Contact" description="Contact page" />
       <Toaster />
-      <Form onSubmit={onSubmit} config={{ mode: 'onBlur' }}>
+      <Form onSubmit={onSubmit} config={{ mode: 'onBlur' }} error={error}>
+        <FormError error={error} wrapperClassName="form-error" />
         <Label name="name" errorClassName="error">
           Name
         </Label>
