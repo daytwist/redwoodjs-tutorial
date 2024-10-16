@@ -4354,6 +4354,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/auth-dbauth-setup@npm:8.3.0":
+  version: 8.3.0
+  resolution: "@redwoodjs/auth-dbauth-setup@npm:8.3.0"
+  dependencies:
+    "@babel/runtime-corejs3": "npm:7.25.6"
+    "@prisma/internals": "npm:5.20.0"
+    "@redwoodjs/cli-helpers": "npm:8.3.0"
+    "@simplewebauthn/browser": "npm:7.4.0"
+    core-js: "npm:3.38.1"
+    prompts: "npm:2.4.2"
+    terminal-link: "npm:2.1.1"
+  checksum: 10c0/6a5df110e0db68a2509d03e959492687bd42c0c293f6c56986285f1f8fc5121bc92a04805f340b524ac39f620f8befa5ea9db5c8938023483c79402273fd1c21
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/auth-dbauth-web@npm:8.3.0":
   version: 8.3.0
   resolution: "@redwoodjs/auth-dbauth-web@npm:8.3.0"
@@ -15187,6 +15202,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@redwoodjs/auth-dbauth-setup": "npm:8.3.0"
     "@redwoodjs/core": "npm:8.3.0"
     "@redwoodjs/project-config": "npm:8.3.0"
   languageName: unknown
